@@ -7,11 +7,8 @@ import {
   AnimatedRotate,
   AnimatedGesture,
 } from "../components/FramerComponents";
-import Link from "next/link";
 import { Icon } from "@iconify/react";
-import { motion, useScroll } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Card } from "react-bootstrap";
 
 // const angka = [1, 2, 3, 4, 5, 6, 7];
 
@@ -195,28 +192,28 @@ export default function Home() {
               id="carrousel"
               className="row justify-content-center pt-6 my-3 mb-5"
             >
-              <h2 className="mb-5">Hehe : </h2>
+              <h4 className="mb-5 fw-bold">Carousel : </h4>
               <div className="col-md-10 carrousel">
                 <article className="cardz bg-primary">
-                  <h1>HTML</h1>
+                  <h1>A</h1>
                 </article>
                 <article className="cardz bg-danger">
-                  <h1>CSS</h1>
+                  <h1>B</h1>
                 </article>
                 <article className="cardz bg-info">
-                  <h1>JS</h1>
+                  <h1>C</h1>
                 </article>
                 <article className="cardz bg-warning">
-                  <h1>React JS</h1>
+                  <h1>D</h1>
                 </article>
                 <article className="cardz bg-dark">
-                  <h1>Next JS</h1>
+                  <h1>E</h1>
                 </article>
                 <article className="cardz bg-success">
-                  <h1>Git</h1>
+                  <h1>F</h1>
                 </article>
                 <article className="cardz bg-secondary">
-                  <h1>GitHub</h1>
+                  <h1>G</h1>
                 </article>
               </div>
             </div>

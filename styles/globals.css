@@ -67,7 +67,7 @@ a {
 }
 
 .pt-6{
-  padding-top: 60px;
+  padding-top: 70px;
 }
 .bg-page{
   background-color: rgb(202, 206, 182);
@@ -79,9 +79,6 @@ a {
 .headerHome{
   background-image: url("/forest1.jpg");
   background-size: cover;
-  /* padding-bottom: 275px;
-  padding-top: 275px; */
-  /* padding-top: 50px; */
 
 }
 .headerOpacity{
@@ -92,11 +89,13 @@ a {
 
 .btnHeader{
   font-weight: bold;
-  color: #FDFDBD;
+  /* color: #FDFDBD; */
+  color: white;
+  
 }
 .textHeader{
   font-weight: normal;
-  font-size: 30px;
+  font-size: 40px;
   font-family: sans-serif;
   color: #FDFDBD;
 }
@@ -123,8 +122,6 @@ a {
 }
 
 .navSetting{
-  /* background-color: rgb(15, 14, 14); */
-  /* padding-top: 50px; */
   background-color: #292b2c;
   transition: 0.7s;
   /* line-height: ; */
@@ -142,10 +139,6 @@ a {
 
 .btnNav{
   color: #FDFDBD;
-  /* text-transform:uppercase; */
-  /* font-weight: bold; */
-  /* border: 1px solid salmon; */
-  /* text-decoration:overline; */
   line-height: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -154,10 +147,6 @@ a {
 
 .home:hover, .login:hover, .about:hover, .pudge:hover{
   color: grey;
-  /* font-weight: bold; */
-  /* text-shadow: 3rem; */
-  /* background-color: rgb(202, 206, 182); */
-  /* background-color: rgb(231, 238, 185); */
   box-shadow: 0px 10px 0px -5px white;
   
 }
@@ -175,23 +164,6 @@ a {
 /* Navbar styling*/ 
 
 
-
-
-
-/* Login styling */
- /* .inidia::before{
-  content: "";
-  display: block;
-  background: url("/gitIcon.png") no-repeat;
-  background-size: 20px;
-  width: 20px;
-  height: 20px;
-  float: left;
-  margin: 8px 5px 0 0;
-  border: 1px solid red;
-  color: red;
-  text-decoration: none;
-} */
 
 
 
@@ -218,11 +190,11 @@ a {
 
 /*Carousel */
 .carrousel{
-  display: grid;
-  grid-auto-flow :column;
-  /* width: 500px; */
-  /* display: flex; */
-  /* flex-direction: row; */
+  /* display: grid; */
+  /* grid-auto-flow :column; */
+  width: 500px;
+  display: flex;
+  flex-direction: row;
   scroll-behavior: auto;
   gap: 1.2rem;
   /* overflow-y: auto; */
@@ -230,6 +202,7 @@ a {
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+  /* display: block; */
 }
 
 
@@ -266,7 +239,8 @@ a {
   scroll-snap-align: start;
   border-radius: 30px;
   height: 200px;
-  width: 250px;
+  /* width: 200px; */
+  min-width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -381,10 +355,6 @@ a {
   }
   .home:hover, .login:hover, .about:hover, .pudge:hover{
     color: grey;
-    /* font-weight: bold; */
-    /* text-shadow: 3rem; */
-    /* background-color: rgb(202, 206, 182); */
-    /* background-color: white; */
     background-color: rgb(202, 206, 182);
     /* line-height: 50px; */
   }
