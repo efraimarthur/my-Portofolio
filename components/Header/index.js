@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <div className="headerHome">
-      <div className="bg-dark bg-opacity-50 headerOpacity ">
+      <div className="bg-info bg-opacity-25 headerOpacity ">
         <div className="container-md d-/flex flex-column align-items/-center text-ce/nter bo/rder">
           {/* <AnimatedGesture> */}
           <div
@@ -34,10 +34,10 @@ const Header = () => {
             }}
             className="textHeader"
           >
-            <span style={{ color: "salmon" }} className="me-2">
+            <span style={{ color: "salmon" }} className="">
               Arthur Efraim{" "}
             </span>
-            <span style={{ color: "white" }} className="w-50">
+            <span style={{ color: "white" }} className="">
               {text}
             </span>
           </div>

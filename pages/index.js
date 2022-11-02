@@ -62,9 +62,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>🗿 | Home Page</title>
+        <title>Arthur Efraim</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/dota2Icons.png" />
       </Head>
       <Layout>
         <div className="bg-page">
@@ -252,7 +252,7 @@ export default function Home() {
                 </article>
               </div>
             </div>
-            <div className="row  justify-content-center">
+            <div className="row justify-content-center">
               <div className="col-md-12">
                 <h4 id="learn" className="fw-bold pt-6">
                   Currently learning
@@ -260,7 +260,7 @@ export default function Home() {
                 <p className="text-decoration-underline mt-5 fw-bold">
                   Programming and markup language
                 </p>
-                <div className="d-flex flex-wrap justify-content-start gap-2">
+                <div className="d-flex flex-wrap gap-2">
                   <Card2
                     cardName="HTML"
                     imgItem="/htmlIcon.png"
@@ -330,7 +330,7 @@ export default function Home() {
               <div id="contact" className="col-md-12 pt-6 mb-5">
                 <h4 className="fw-bold">Contact</h4>
                 <div className="d-flex flex-wrap gap-2 text-white justify-content-start">
-                  <div className="p-3 fw-bold shadow-sm rounded-2 d-flex contactBody">
+                  <div className="p-3 fw-bold shadow-sm rounded-2 d-flex contactBody border border-2 border-warning">
                     <Icon
                       icon="bi:instagram"
                       color="#EA047E"
@@ -358,7 +358,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="p-3 fw-bold shadow-sm rounded-2 d-flex contactBody">
+                  <div className="p-3 fw-bold shadow-sm rounded-2 d-flex contactBody border border-2 border-info">
                     <Icon
                       icon="akar-icons:github-fill"
                       color="#5837d0"
@@ -384,7 +384,7 @@ export default function Home() {
                       </a>
                     </div>
                   </div>
-                  <div className="p-3 fw-bold shadow-sm rounded-2 d-flex contactBody">
+                  <div className="p-3 fw-bold shadow-sm rounded-2 d-flex contactBody border border-2 border-danger">
                     <Icon
                       icon="logos:google-gmail"
                       className="me-2"

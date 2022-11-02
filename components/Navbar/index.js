@@ -24,7 +24,7 @@ const NavBar = () => {
       expand="sm"
       // bg="dark"
       variant="dark"
-      className={scroll ? "fixed-top navTop" : "navSetting fixed-top"}
+      className={scroll ? "fixed-top navTop" : "fixed-top navSetting "}
     >
       <Container>
         <Navbar.Brand
@@ -51,14 +51,14 @@ const NavBar = () => {
                 About
               </Nav.Link>
             </Link>
-            <Link href={"login"} passHref>
+            {/* <Link href={"login"} passHref>
               <Nav.Link className="btnNav login px-2 mx-1 d-flex justify-content-center ">
                 Login
               </Nav.Link>
-            </Link>
+            </Link> */}
             <Link href={"#learn"} passHref scroll={false}>
               <Nav.Link className="btnNav pudge px-2 mx-1 d-flex justify-content-center ">
-                More
+                TechStack
               </Nav.Link>
             </Link>
           </Nav>
