@@ -30,13 +30,14 @@ const Header = () => {
               letterSpacing: "3px",
               // fontWeight: "bold",
               // textTransform: "uppercase",
+              width: "90%",
             }}
             className="textHeader"
           >
             <span style={{ color: "salmon" }} className="me-2">
               Arthur Efraim{" "}
             </span>
-            <span style={{ color: "white" }} className="">
+            <span style={{ color: "white" }} className="w-50">
               {text}
             </span>
           </div>
