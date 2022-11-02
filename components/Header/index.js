@@ -14,8 +14,8 @@ const Header = () => {
   const [text] = useTypewriter({
     words: ["a Junior Front-end Developer", "a Dota 2 player"],
     loop: [0], // Infinit,
-    typeSpeed: [20],
-    deleteSpeed: [20],
+    typeSpeed: [50],
+    deleteSpeed: [50],
     // cursor: [1],
   });
 

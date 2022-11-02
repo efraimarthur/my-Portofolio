@@ -38,7 +38,7 @@ export default function Home() {
             height={40}
             layout=""
             alt="anjinggila"
-            className="card-img-top "
+            className="card-img-top"
           />
           <p className="card-title fw-bold">{cardName}</p>
         </div>
@@ -125,8 +125,8 @@ export default function Home() {
                       <Image
                         src="/dog1.png"
                         // quality={100}
-                        width={100}
-                        height={62.5}
+                        width={1}
+                        height={0.625}
                         layout="responsive"
                         alt="anjinggila"
                         className=" anjingB p-1 rounded-5"
@@ -192,28 +192,63 @@ export default function Home() {
               id="carrousel"
               className="row justify-content-center pt-6 my-3 mb-5"
             >
-              <h4 className="mb-5 fw-bold">Carousel : </h4>
-              <div className="col-md-10 carrousel">
-                <article className="cardz bg-primary">
-                  <h1>A</h1>
+              <h4 className="mb-5 fw-bold">Games that i play </h4>
+              <div className="col-md-10 carrousel text-white fs-1 fw-semibold">
+                <article className="cardz d-flex justify-content-between">
+                  <p className="">Dota 2</p>
+                  <Image
+                    src="/dota2Icons.png"
+                    quality={50}
+                    width={320}
+                    height={0}
+                    // objectPosition="-30px 9px "
+                    objectFit="cover"
+                    // layout="fill"
+                    alt="anjinggila"
+                    className="carouselGambar ms-4"
+                  />
                 </article>
-                <article className="cardz bg-danger">
-                  <h1>B</h1>
+                <article className="cardz d-flex justify-content-between">
+                  <p className="">Valorant</p>
+                  <Image
+                    src="/iconValorant.png"
+                    quality={50}
+                    width={320}
+                    height={115}
+                    // objectPosition="-50px 0px"
+                    objectFit="cover"
+                    // layout="fill"
+                    alt="anjinggila"
+                    className="carouselGambar ms-4"
+                  />
                 </article>
-                <article className="cardz bg-info">
-                  <h1>C</h1>
+                <article className="cardz d-flex justify-content-between ">
+                  <p className="">Terraria</p>
+                  <Image
+                    src="/iconTerraria.png"
+                    quality={50}
+                    width={320}
+                    height={115}
+                    // objectPosition="-50px 0px"
+                    objectFit="cover"
+                    // layout="fill"
+                    alt="anjinggila"
+                    className="carouselGambar ms-4"
+                  />
                 </article>
-                <article className="cardz bg-warning">
-                  <h1>D</h1>
-                </article>
-                <article className="cardz bg-dark">
-                  <h1>E</h1>
-                </article>
-                <article className="cardz bg-success">
-                  <h1>F</h1>
-                </article>
-                <article className="cardz bg-secondary">
-                  <h1>G</h1>
+                <article className="cardz d-flex justify-content-between ">
+                  <p className="">{`Assassin's Creed`}</p>
+                  <Image
+                    src="/iconAC.png"
+                    quality={50}
+                    width={320}
+                    height={115}
+                    // objectPosition="-50px 0px"
+                    objectFit="cover"
+                    // layout="fill"
+                    alt="anjinggila"
+                    className="carouselGambar ms-4"
+                  />
                 </article>
               </div>
             </div>
