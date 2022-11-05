@@ -21,18 +21,22 @@ const Header = () => {
 
   return (
     <div
-      style={{ backgroundColor: "rgb(202, 206, 182)" }}
+      style={{ backgroundColor: "rgb(245, 236, 236)" }}
       className="headerHeight container-fluid"
     >
       <div className="row justify-content-evenly align-items-center d-flex flex-row-reverse">
         {/* <AnimatedGesture> */}
         <div className="col-md-6">
           <div className=" d-flex justify-content-center">
-            <div className="rounded-circle p-3 bg-secondary bg-opacity-50">
+            <div
+              className="rounded-circle p-3 bg-secondary bg-opacity-50"
+              style={{ cursor: "pointer" }}
+            >
               <div className="rounded-circle p-3 bg-secondary">
                 <Image
                   className="rounded-circle p-3 bg-dark bg-opacity-25"
                   src={"/dog1.png"}
+                  quality={20}
                   width={300}
                   height={300}
                   objectFit="cover"
@@ -54,7 +58,7 @@ const Header = () => {
           className="textHeader col-md-4 text-start"
         >
           <span
-            className="text-white border rounded-end rounded-top bg-dark px-5"
+            className="text-white border rounded-end rounded-top bg-dark px-2"
             style={{ fontSize: "40%" }}
           >
             Hello
@@ -66,10 +70,18 @@ const Header = () => {
             {" "}
             {"I am"}{" "}
           </span>
+
           <span className="" style={{ fontSize: "50%", color: "teal" }}>
             {text}
           </span>
-          <p className="text-dark text-uppercase">Arthur Efraim</p>
+          <AnimatedGesture>
+            <p
+              className="text-dark text-uppercase"
+              style={{ cursor: "pointer" }}
+            >
+              Arthur Efraim
+            </p>
+          </AnimatedGesture>
           <p style={{ fontSize: "60%", color: "#555" }}>Welcome to my Web</p>
         </div>
         {/* </AnimatedGesture> */}

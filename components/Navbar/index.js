@@ -24,9 +24,7 @@ const NavBar = () => {
       expand="sm"
       // bg="dark"
       variant="dark"
-      className={
-        scroll ? "fixed-top navTop" : "fixed-top shadow-sm navSetting "
-      }
+      className={scroll ? "fixed-top navTop" : "fixed-top shadow navSetting "}
     >
       <Container>
         <Navbar.Brand
@@ -44,29 +42,32 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav" className="">
           <Nav className="mx-auto px-2 py-0 nav-bungkus">
             <Link href={""} passHref>
-              <Nav.Link className="btnNav home px-/2 mx-1 d-flex justify-content-center">
+              <Nav.Link className="btnNav home px-/2 mx-1 d-flex">
                 Home
               </Nav.Link>
             </Link>
-            <Link href={"#anjing"} passHref scroll={false}>
-              <Nav.Link className="btnNav about px-2 mx-1 d-flex justify-content-center">
+            <Link href={"#about"} passHref scroll={false}>
+              <Nav.Link className="btnNav about px-2 mx-1 d-flex">
                 About
               </Nav.Link>
             </Link>
+            {/* <Link href={"#games"} passHref scroll={false}>
+              <Nav.Link className="btnNav pudge px-2 mx-1 d-flex ">
+                FavGames
+              </Nav.Link>
+            </Link> */}
             {/* <Link href={"login"} passHref>
-              <Nav.Link className="btnNav login px-2 mx-1 d-flex justify-content-center ">
+              <Nav.Link className="btnNav login px-2 mx-1 d-flex ">
                 Login
               </Nav.Link>
             </Link> */}
-            <Link href={"#learn"} passHref scroll={false}>
-              <Nav.Link className="btnNav pudge px-2 mx-1 d-flex justify-content-center ">
-                A
+            {/* <Link href={"#learn"} passHref scroll={false}>
+              <Nav.Link className="btnNav pudge px-2 mx-1 d-flex ">
+                Skills
               </Nav.Link>
-            </Link>
-          </Nav>
-          <Nav className="m/x-auto">
+            </Link> */}
             <Link href={"#contact"} passHref scroll={false}>
-              <Nav.Link className="btnNav contact d-flex mx-1 px-2 justify-content-center">
+              <Nav.Link className="btnNav contact d-flex mx-1 px-2">
                 Contact
               </Nav.Link>
             </Link>

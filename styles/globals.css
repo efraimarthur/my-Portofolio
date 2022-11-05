@@ -70,7 +70,8 @@ a {
   padding-top: 70px;
 }
 .bg-page{
-  background-color: rgb(202, 206, 182);
+  background-color: rgb(245, 236, 236);
+  /* background-color: red; */
   padding-bottom: 50px;
 }
 
@@ -120,10 +121,9 @@ a {
 .navSetting{
   /* background-color: #292b2c; */
   /* background-color: white; */
-  background:  rgb(202, 206, 182);
+
+  background:  rgb(245, 236, 236);
   transition: 0.7s;
-  /* line-height: ; */
-  /* padding: 1px; */
 }
 .navTop{
   /* padding: 1px; */
@@ -141,32 +141,24 @@ a {
   color: #333;
   line-height: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family: Copperplate Gothic Light, sans-serif; */
+  /* font-family: system-ui; */
 }
 
 
 
-.home:hover, .login:hover, .about:hover, .pudge:hover{
+.home:hover, .login:hover, .about:hover, .pudge:hover, .contact:hover{
   color: grey;
   /* box-shadow: 0px 10px 0px -5px white; */
   text-decoration: underline;
   transition: 0.5s ;
 }
-
-
-
-.contact{
-  text-decoration: underline;
-}
-.contact:hover{
-  color: grey;
-}
-
+/* .home:visited{
+  color: blue;
+  background-color: red;
+} */
 
 /* Navbar styling*/ 
-
-
-
-
 
 
 .loginBg{
@@ -358,17 +350,10 @@ a {
     text-transform: capitalize;
     
   }
-  
 
-
-  .btnNav.contact{
-    color: #FDFDBD;
-  }
-
-
-  .toggleNav:hover{
-    /* background-color: red; */
-    color: grey;
+  .toggleNav{
+    background-color: #333;  
+    color: black;
     /* border: 1px solid white; */
   }
   .home:hover, .login:hover, .about:hover, .pudge:hover{
