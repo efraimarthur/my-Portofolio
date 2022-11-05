@@ -9,6 +9,7 @@ import {
 } from "../components/FramerComponents";
 import { Icon } from "@iconify/react";
 import { useState, useEffect } from "react";
+import Carousel from "react-bootstrap/Carousel";
 
 // const angka = [1, 2, 3, 4, 5, 6, 7];
 
@@ -252,6 +253,7 @@ export default function Home() {
                 </article>
               </div>
             </div>
+
             <div className="row justify-content-center">
               <div className="col-md-12">
                 <h4 id="learn" className="fw-bold pt-6">
@@ -301,11 +303,11 @@ export default function Home() {
                     imgItem={"/bootstrapIcon.png"}
                     bgColor="#554994"
                   />
-                  <Card2
+                  {/* <Card2
                     cardName="TailwindCSS"
                     imgItem={"/tailwindIcon.png"}
                     bgColor="#3AB4F2"
-                  />
+                  /> */}
                 </div>
                 <p className="mt-3 fw-bold text-decoration-underline">
                   Database
@@ -330,7 +332,7 @@ export default function Home() {
               <div id="contact" className="col-md-12 pt-6 mb-5">
                 <h4 className="fw-bold">Contact</h4>
                 <div className="d-flex flex-wrap gap-2 text-white justify-content-start">
-                  <div className="p-3 fw-bold shadow-sm rounded-2 d-flex contactBody border border-2 border-warning">
+                  <div className="p-3 fw-bold shadow-sm rounded-2 d-flex contactBody">
                     <Icon
                       icon="bi:instagram"
                       color="#EA047E"
@@ -358,7 +360,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="p-3 fw-bold shadow-sm rounded-2 d-flex contactBody border border-2 border-info">
+                  <div className="p-3 fw-bold shadow-sm rounded-2 d-flex contactBody ">
                     <Icon
                       icon="akar-icons:github-fill"
                       color="#5837d0"
@@ -384,7 +386,7 @@ export default function Home() {
                       </a>
                     </div>
                   </div>
-                  <div className="p-3 fw-bold shadow-sm rounded-2 d-flex contactBody border border-2 border-danger">
+                  <div className="p-3 fw-bold shadow-sm rounded-2 d-flex contactBody">
                     <Icon
                       icon="logos:google-gmail"
                       className="me-2"

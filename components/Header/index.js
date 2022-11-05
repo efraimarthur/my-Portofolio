@@ -12,47 +12,67 @@ import { useTypewriter } from "react-simple-typewriter";
 
 const Header = () => {
   const [text] = useTypewriter({
-    words: ["a Junior Front-end Developer", "a Dota 2 player"],
+    words: ["Junior", "Front-end", "Developer"],
     loop: [0], // Infinit,
-    typeSpeed: [50],
-    deleteSpeed: [50],
+    typeSpeed: [10],
+    deleteSpeed: [10],
     // cursor: [1],
   });
 
   return (
-    <div className="headerHome">
-      <div className="bg-info bg-opacity-25 headerOpacity ">
-        <div className="container-md d-/flex flex-column align-items/-center text-ce/nter bo/rder">
-          {/* <AnimatedGesture> */}
-          <div
-            style={{
-              cursor: "pointer",
-              letterSpacing: "3px",
-              // fontWeight: "bold",
-              // textTransform: "uppercase",
-              width: "90%",
-            }}
-            className="textHeader"
-          >
-            <span style={{ color: "salmon" }} className="">
-              Arthur Efraim{" "}
-            </span>
-            <span style={{ color: "white" }} className="">
-              {text}
-            </span>
+    <div
+      style={{ backgroundColor: "rgb(202, 206, 182)" }}
+      className="headerHeight container-fluid"
+    >
+      <div className="row justify-content-evenly align-items-center d-flex flex-row-reverse">
+        {/* <AnimatedGesture> */}
+        <div className="col-md-6">
+          <div className=" d-flex justify-content-center">
+            <div className="rounded-circle p-3 bg-secondary bg-opacity-50">
+              <div className="rounded-circle p-3 bg-secondary">
+                <Image
+                  className="rounded-circle p-3 bg-dark bg-opacity-25"
+                  src={"/dog1.png"}
+                  width={300}
+                  height={300}
+                  objectFit="cover"
+                  // objectPosition="0px -100px"
+                  alt="profile.png"
+                />
+              </div>
+            </div>
           </div>
-          {/* </AnimatedGesture> */}
-          <Link href={"/#lorem"} passHref scroll={false}>
-            <button
-              type="button"
-              className="btn btn-outline-light border btnHeader rounded-pill border-2 align-items-start px-5 py-3"
-              style={{ position: "relative" }}
-              // onClick={() => Router.push("/login")}
-            >
-              More About me
-            </button>
-          </Link>
         </div>
+        <div
+          style={{
+            fontWeight: "bold",
+            // textTransform: "uppercase",
+            // width: "90%",
+            fontSize: "3em",
+            fontFamily: "monospace",
+          }}
+          className="textHeader col-md-4 text-start"
+        >
+          <span
+            className="text-white border rounded-end rounded-top bg-dark px-5"
+            style={{ fontSize: "40%" }}
+          >
+            Hello
+          </span>
+          <span
+            className="text-uppercase"
+            style={{ fontSize: "50%", color: "#555" }}
+          >
+            {" "}
+            {"I am"}{" "}
+          </span>
+          <span className="" style={{ fontSize: "50%", color: "teal" }}>
+            {text}
+          </span>
+          <p className="text-dark text-uppercase">Arthur Efraim</p>
+          <p style={{ fontSize: "60%", color: "#555" }}>Welcome to my Web</p>
+        </div>
+        {/* </AnimatedGesture> */}
       </div>
     </div>
   );

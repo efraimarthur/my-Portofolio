@@ -13,7 +13,7 @@ const NavBar = () => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       const scrollCheck = window.scrollY < 500;
-      if (scrollCheck !== scroll) {
+      if (scroll !== scrollCheck) {
         setScroll(scrollCheck);
       }
     });
@@ -24,13 +24,15 @@ const NavBar = () => {
       expand="sm"
       // bg="dark"
       variant="dark"
-      className={scroll ? "fixed-top navTop" : "fixed-top navSetting "}
+      className={
+        scroll ? "fixed-top navTop" : "fixed-top shadow-sm navSetting "
+      }
     >
       <Container>
         <Navbar.Brand
           className="navBrand"
           href="/"
-          style={{ fontSize: "24px" }}
+          style={{ fontSize: "1.5em" }}
         >
           {/* <Icon icon="cib:next-js" /> */}
           {"Ture"}
@@ -58,7 +60,7 @@ const NavBar = () => {
             </Link> */}
             <Link href={"#learn"} passHref scroll={false}>
               <Nav.Link className="btnNav pudge px-2 mx-1 d-flex justify-content-center ">
-                TechStack
+                A
               </Nav.Link>
             </Link>
           </Nav>
