@@ -52,6 +52,13 @@ a {
     align-items: center;
 }
 
+.text-about{
+  word-spacing: 3px;
+}
+.hoverAbout:hover{
+  border-bottom: 2px solid gold;
+}
+
 
 
 .anjingA{
@@ -84,17 +91,11 @@ a {
   height: 110vh;
 }
 
-.btnHeader{
-  font-weight: bold;
-  /* color: #FDFDBD; */
-  color: white;
-  
-}
 .textHeader{
   font-weight: normal;
   font-size: 40px;
   font-family: sans-serif;
-  color: #FDFDBD;
+  /* color: #FDFDBD; */
 }
 
 
@@ -138,7 +139,7 @@ a {
 
 .btnNav{
   /* color: #FDFDBD; */
-  color: #333;
+  color: red;
   line-height: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* font-family: Copperplate Gothic Light, sans-serif; */

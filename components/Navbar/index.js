@@ -42,12 +42,18 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav" className="">
           <Nav className="mx-auto px-2 py-0 nav-bungkus">
             <Link href={""} passHref>
-              <Nav.Link className="btnNav home px-/2 mx-1 d-flex">
+              <Nav.Link
+                style={{ color: "black" }}
+                className="btnNav home px-/2 mx-1 d-flex text-dark"
+              >
                 Home
               </Nav.Link>
             </Link>
             <Link href={"#about"} passHref scroll={false}>
-              <Nav.Link className="btnNav about px-2 mx-1 d-flex">
+              <Nav.Link
+                // style={{ color: "black" }}
+                className="btnNav about px-2 mx-1 d-flex text-dark"
+              >
                 About
               </Nav.Link>
             </Link>
@@ -67,7 +73,10 @@ const NavBar = () => {
               </Nav.Link>
             </Link> */}
             <Link href={"#contact"} passHref scroll={false}>
-              <Nav.Link className="btnNav contact d-flex mx-1 px-2">
+              <Nav.Link
+                // style={{ color: "black" }}
+                className="btnNav contact d-flex mx-1 px-2 text-dark"
+              >
                 Contact
               </Nav.Link>
             </Link>

@@ -1,12 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
-import Header from "../components/Header";
 import Layout from "../components/Layout";
 import {
   AnimatedHover,
   AnimatedRotate,
   AnimatedGesture,
 } from "../components/FramerComponents";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { useState, useEffect } from "react";
@@ -71,8 +71,7 @@ export default function Home() {
       <Layout>
         <div className="bg-page">
           <div id="top" className="container-home">
-            <div className="row pt-6" id="about">
-              <h4 className="fw-bold text-center my-3">About</h4>
+            <div className="row pt-6">
               <div className="col-md-4 col-sm-6 p-0">
                 <AnimatedHover>
                   <Image
@@ -134,56 +133,61 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="">
-              <p id="lorem" className="text-center pt-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                atque dolorem nisi vero provident nihil sequi minima expedita
-                eos ex doloribus eaque nemo, numquam rerum explicabo
-                consequuntur porro dignissimos! Architecto id sit voluptatibus
-                asperiores quaerat quo necessitatibus corrupti aperiam esse quos
-                doloremque nostrum facilis cumque fugiat cum, in nam impedit
-                laborum sequi et non optio magni est! Adipisci non itaque, quasi
-                obcaecati excepturi nostrum dolorem culpa cum, voluptas,
-                asperiores tempora blanditiis iusto molestiae laboriosam
-                possimus. Rem, blanditiis. Sit fugit exercitationem praesentium
-                magni illum incidunt ad labore eos magnam odit culpa cumque
-                tenetur sapiente molestias reprehenderit, quam harum vel
-                expedita et! Tenetur et nobis dolores perferendis perspiciatis
-                sequi commodi dolore distinctio at? Aperiam, reprehenderit odio
-                voluptates autem eos at dolore reiciendis dicta, iste aspernatur
-                deserunt error sequi unde perferendis impedit adipisci
-                temporibus quia accusantium sint quibusdam numquam rerum quasi!
-                Voluptatibus facilis quis harum accusamus dolor repellat amet.
-                Totam expedita necessitatibus tenetur dolores tempora itaque ab
-                dolorem laudantium qui quia iure eligendi est nulla nostrum,
-                alias excepturi aut cupiditate illum saepe commodi dignissimos
-                quos, labore ducimus? Doloremque ea id quas, libero consequatur
-                esse earum, tempore enim vel alias exercitationem repellat quasi
-                culpa molestiae placeat, harum et autem sequi ex beatae
-                temporibus. Neque corporis perferendis repellendus saepe eius
-                asperiores rem numquam. Neque placeat quae veniam. Fugit
-                distinctio officia animi voluptas harum sit repellat nesciunt
-                optio laudantium minima ipsum quam mollitia voluptatibus,
-                doloribus laboriosam facilis, amet iure. Labore, neque! Amet
-                exercitationem in suscipit corrupti quae ea itaque sapiente
-                pariatur corporis consectetur, mollitia at cum nisi commodi est
-                magni a. Et odit perspiciatis ex, ratione quidem officiis est
-                distinctio voluptate alias. Soluta id consectetur nulla ipsa
-                fuga fugit qui exercitationem laudantium voluptates ullam
-                assumenda, sapiente corporis blanditiis praesentium labore
-                voluptatum aut quasi officia recusandae. Temporibus ipsam
-                excepturi quas suscipit soluta consectetur ad omnis at
-                dignissimos quo? Deleniti accusamus maxime veritatis harum
-                dolorem asperiores quibusdam eum odit provident pariatur, sint
-                inventore corporis earum repellendus dolore vero consequatur
-                nisi mollitia sit id animi repudiandae distinctio similique!
-                Velit quo magnam consectetur fugit cumque dolorum nisi fugiat id
-                consequuntur architecto neque qui itaque ut, est quam. Similique
-                exercitationem, cupiditate vel nostrum optio, molestiae
-                quibusdam illo quas veritatis molestias officiis voluptatum
-                cumque alias pariatur blanditiis accusamus quo, corporis
-                corrupti iusto eius esse. Perspiciatis laboriosam ipsa at.
-              </p>
+
+            <div id="about" className="pt-6 mb-5">
+              <h4 className="fw-bold text-center my-5 ">About me</h4>
+              <div className="d-flex flex-row text-secondary">
+                <Image
+                  src="/profileUnsplash.jpg"
+                  quality={100}
+                  width={300}
+                  height={200}
+                  // layout="responsive"
+                  alt="profile.jpg"
+                  objectFit="cover"
+                  objectPosition="-50px 0px"
+                  className="rounded-5 p-1 w-50"
+                />
+                <div className="mx-4 w-50">
+                  <h5 className="text-start">{`Hi, I'm Arthur Efraim`}</h5>
+                  <p id="lorem" className="text-start text-about">
+                    Since beginning my journey as an Informatics student over 4
+                    years ago, I&#39;ve been studying about several types of
+                    Programming languages, But in the end I like Web programming
+                    the most. I&#39;m quietly confident, naturally curious,
+                    obsessed in learning new things, and perpetually working on
+                    improving my skills on Developing a Website. After
+                    graduating from the University of Klabat{" "}
+                    <a
+                      href="https://www.unklab.ac.id/"
+                      className="fw-bold text-dark fs-5 hoverAbout"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {`"UNKLAB"`}
+                    </a>{" "}
+                    I&#39;ve been learning about making website with Front-End
+                    tech such as <b>Html</b>, <b>CSS</b>, <b>Javascript</b>,{" "}
+                    <a
+                      href="https://getbootstrap.com/"
+                      className="fw-bold text-primary fs-5 hoverAbout"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Bootstrap
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      href="https://reactjs.org/"
+                      className="fw-bold text-info fs-5 hoverAbout"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      ReactJS
+                    </a>
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="row justify-content-center" id="learn">
               <div className="col-md-12">
