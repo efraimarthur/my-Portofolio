@@ -2,6 +2,7 @@ import React from "react";
 import Router from "next/router";
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./Header.module.css";
 import {
   AnimatedHover,
   AnimatedRotate,
@@ -71,9 +72,7 @@ const Header = () => {
             {"I am"}{" "}
           </span>
 
-          <span className="" style={{ fontSize: "50%", color: "teal" }}>
-            {text}
-          </span>
+          <span className={` ${styles.color}`}>{text}</span>
           <AnimatedGesture>
             <p
               className="text-dark text-uppercase"

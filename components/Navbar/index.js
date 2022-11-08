@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useState, useEffect } from "react";
+import styles from "./Navbar.module.css";
 // import { Icon } from "@iconify/react";
 
 const NavBar = () => {
@@ -15,6 +16,7 @@ const NavBar = () => {
       const scrollCheck = window.scrollY < 500;
       if (scroll !== scrollCheck) {
         setScroll(scrollCheck);
+        // console.log(scrollCheck);
       }
     });
   });
@@ -23,7 +25,7 @@ const NavBar = () => {
       collapseOnSelect
       expand="sm"
       // bg="dark"
-      variant="dark"
+      // variant="light"
       className={scroll ? "fixed-top navTop" : "fixed-top shadow navSetting "}
     >
       <Container>
@@ -40,11 +42,13 @@ const NavBar = () => {
           className="toggleNav"
         />
         <Navbar.Collapse id="responsive-navbar-nav" className="">
-          <Nav className="mx-auto px-2 py-0 nav-bungkus">
+          <Nav className="mx-auto px-2 py-0 nav-bun/gkus">
             <Link href={""} passHref>
               <Nav.Link
-                style={{ color: "black" }}
-                className="btnNav home px-/2 mx-1 d-flex text-dark"
+                id="gaul"
+                // style={{ color: "green" }}
+                className={`btnNav home ${styles.navButton}`}
+                // className="bg-primary"
               >
                 Home
               </Nav.Link>
@@ -52,7 +56,7 @@ const NavBar = () => {
             <Link href={"#about"} passHref scroll={false}>
               <Nav.Link
                 // style={{ color: "black" }}
-                className="btnNav about px-2 mx-1 d-flex text-dark"
+                className={`btnNav about px-2 mx-1 d-flex ${styles.navButton}`}
               >
                 About
               </Nav.Link>
@@ -75,7 +79,7 @@ const NavBar = () => {
             <Link href={"#contact"} passHref scroll={false}>
               <Nav.Link
                 // style={{ color: "black" }}
-                className="btnNav contact d-flex mx-1 px-2 text-dark"
+                className={`btnNav contact d-flex mx-1 px-2 ${styles.navButton}`}
               >
                 Contact
               </Nav.Link>

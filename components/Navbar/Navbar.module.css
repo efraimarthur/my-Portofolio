@@ -1,0 +1,13 @@
+
+.navButton{
+    color: black;
+}
+.navButton:hover{
+    color: grey;
+}
+/* .navButton:visited{
+    color: white;
+} */
+.navButton:active{
+    color: white;
+}

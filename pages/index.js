@@ -6,11 +6,10 @@ import {
   AnimatedRotate,
   AnimatedGesture,
 } from "../components/FramerComponents";
-import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { useState, useEffect } from "react";
-import Carousel from "react-bootstrap/Carousel";
+import { useInView } from "react-intersection-observer";
 
 // const angka = [1, 2, 3, 4, 5, 6, 7];
 
@@ -60,6 +59,29 @@ export default function Home() {
       </div>
     );
   };
+
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
+
+  const animation = useAnimation();
+
+  useEffect(() => {
+    console.log("use effect hook , inView = ", inView);
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 1,
+          bounce: 0.3,
+        },
+      });
+    }
+    if (!inView) {
+      animation.start({ x: "-100vw" });
+    }
+  }, [inView]);
 
   return (
     <>
@@ -134,23 +156,25 @@ export default function Home() {
               </div>
             </div>
 
-            <div id="about" className="pt-6 mb-5">
-              <h4 className="fw-bold text-center my-5 ">About me</h4>
-              <div className="d-flex flex-row text-secondary">
-                <Image
-                  src="/profileUnsplash.jpg"
-                  quality={100}
-                  width={300}
-                  height={200}
-                  // layout="responsive"
-                  alt="profile.jpg"
-                  objectFit="cover"
-                  objectPosition="-50px 0px"
-                  className="rounded-5 p-1 w-50"
-                />
-                <div className="mx-4 w-50">
-                  <h5 className="text-start">{`Hi, I'm Arthur Efraim`}</h5>
-                  <p id="lorem" className="text-start text-about">
+            <div ref={ref} id="about" className="pt-6 mb-6">
+              <h4 className="fw-bold text-center mb-5">About me</h4>
+              <div className="row text-secondary">
+                <motion.div className="col-md-4" animate={animation}>
+                  <Image
+                    src="/profileUnsplash.jpg"
+                    quality={100}
+                    width={5}
+                    height={4}
+                    layout="responsive"
+                    alt="profile.jpg"
+                    objectFit="cover"
+                    // objectPosition="-100px 0px"
+                    className="rounded-3 p-1"
+                  />
+                </motion.div>
+                <motion.div className="col-md-8" animate={animation}>
+                  <h5 className="text-start mt-2 p-2">{`Hi, I'm Arthur Efraim`}</h5>
+                  <p id="lorem" className="text-start p-2 text-about">
                     Since beginning my journey as an Informatics student over 4
                     years ago, I&#39;ve been studying about several types of
                     Programming languages, But in the end I like Web programming
@@ -186,7 +210,7 @@ export default function Home() {
                       ReactJS
                     </a>
                   </p>
-                </div>
+                </motion.div>
               </div>
             </div>
             <div className="row justify-content-center" id="learn">
@@ -261,7 +285,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div id="games" className="row justify-content-center pt-6 ">
+            {/* <div id="games" className="row justify-content-center pt-6 ">
               <h4 className=" fw-bold text-center my-3">Favorite Games</h4>
               <div className="col-md-10 carrousel text-white fs-1 fw-semibold">
                 <article className="cardz d-flex justify-content-between">
@@ -321,7 +345,7 @@ export default function Home() {
                   />
                 </article>
               </div>
-            </div>
+            </div> */}
 
             {/* {"contact"} */}
             <div className="row mb-5">
@@ -373,6 +397,7 @@ export default function Home() {
                         Github
                       </a>
                       <a
+                        passHref
                         className="fw-normal contactContent"
                         href="https://github.com/efraimarthur"
                         target="_blank"
