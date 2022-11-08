@@ -11,12 +11,6 @@ import { Icon } from "@iconify/react";
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-// const angka = [1, 2, 3, 4, 5, 6, 7];
-
-// angka.forEach((e, i) => {
-//   console.log("asd ke -" + (i + 1) + " adalah : " + e);
-// });
-
 export default function Home() {
   // const { scrollYProgress } = useScroll();
   const Card2 = ({ cardName, imgItem, bgColor }) => {
@@ -60,16 +54,36 @@ export default function Home() {
     );
   };
 
-  const { ref, inView } = useInView({
-    threshold: 0.2,
-  });
+  const [ref1, inView] = useInView();
+  const [ref2, inView2] = useInView();
+  // {threshold: 0.2,}
 
-  const animation = useAnimation();
+  const animation1 = useAnimation();
+  const animation2 = useAnimation();
 
   useEffect(() => {
-    console.log("use effect hook , inView = ", inView);
+    console.log("use effect hook , inView2 = ", inView2);
+
+    if (inView2) {
+      animation2.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 1,
+          bounce: 0.3,
+        },
+      });
+    }
+    if (!inView2) {
+      animation2.start({ x: "-100vw" });
+    }
+  }, [inView2]);
+
+  useEffect(() => {
+    console.log("use effect hook , inView1 = ", inView);
+
     if (inView) {
-      animation.start({
+      animation1.start({
         x: 0,
         transition: {
           type: "spring",
@@ -79,7 +93,7 @@ export default function Home() {
       });
     }
     if (!inView) {
-      animation.start({ x: "-100vw" });
+      animation1.start({ x: "-100vw" });
     }
   }, [inView]);
 
@@ -156,10 +170,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div ref={ref} id="about" className="pt-6 mb-6">
+            <div ref={ref1} id="about" className="pt-6 mb-6">
               <h4 className="fw-bold text-center mb-5">About me</h4>
               <div className="row text-secondary">
-                <motion.div className="col-md-4" animate={animation}>
+                <motion.div className="col-md-4" animate={animation1}>
                   <Image
                     src="/profileUnsplash.jpg"
                     quality={100}
@@ -172,7 +186,7 @@ export default function Home() {
                     className="rounded-3 p-1"
                   />
                 </motion.div>
-                <motion.div className="col-md-8" animate={animation}>
+                <motion.div className="col-md-8" animate={animation1}>
                   <h5 className="text-start mt-2 p-2">{`Hi, I'm Arthur Efraim`}</h5>
                   <p id="lorem" className="text-start p-2 text-about">
                     Since beginning my journey as an Informatics student over 4
@@ -349,9 +363,12 @@ export default function Home() {
 
             {/* {"contact"} */}
             <div className="row mb-5">
-              <div id="contact" className="col-md-12 pt-6 mb-5">
+              <div ref={ref2} id="contact" className="col-md-12 pt-6 mb-5">
                 <h4 className="fw-bold my-3 text-center">Contact</h4>
-                <div className="d-flex flex-wrap gap-2 text-white justify-content-start">
+                <motion.div
+                  animate={animation2}
+                  className="d-flex flex-wrap gap-2 text-white justify-content-start"
+                >
                   <div className="p-3 fw-bold shadow-sm rounded-2 d-flex contactBody">
                     <Icon
                       icon="bi:instagram"
@@ -432,7 +449,7 @@ export default function Home() {
                       </a>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
